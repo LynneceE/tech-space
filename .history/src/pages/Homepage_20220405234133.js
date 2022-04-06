@@ -5,10 +5,8 @@ import Categories from '../components/Categories';
 const Homepage = () => {
     return (
         <div>
-            <Navbar/>
-            <Categories/>
+            <Navbar />
+            <Categories />
         </div>
     )
 }
-
-export default Homepage

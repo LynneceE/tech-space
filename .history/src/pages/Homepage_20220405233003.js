@@ -1,14 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Categories from '../components/Categories';
+import Categories from '../components/Categories'
 
-const Homepage = () => {
+export default function Homepage() {
     return (
         <div>
             <Navbar/>
-            <Categories/>
         </div>
     )
 }
-
-export default Homepage
