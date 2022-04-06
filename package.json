@@ -1,0 +1,19 @@
+{
+  "name": "tech-space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LynneceE/tech-space.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LynneceE/tech-space/issues"
+  },
+  "homepage": "https://github.com/LynneceE/tech-space#readme"
+}
