@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const { Category } = require('.');
 
 //const { Category } = require('./Category');
 
@@ -20,11 +21,13 @@ const productSchema = new Schema(
             type: Number,
             required: true
         },
+
         category: {
             type: Schema.Types.ObjectId,
             ref: 'Category',
             required: true
-        }
+        },
+
     },
     {
         toJSON: {
