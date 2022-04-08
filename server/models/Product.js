@@ -1,6 +1,6 @@
-const { Schema } = require('mongoose');
-const { INTEGER } = require('sequelize/dist');
-const { Category } = require('./Category');
+const { Schema, model } = require('mongoose');
+
+//const { Category } = require('./Category');
 
 const productSchema = new Schema(
     {
@@ -9,7 +9,7 @@ const productSchema = new Schema(
             required: true
         },
         image: {
-            type: URL,
+            type: String,
             required: true,
         },
         description: {
@@ -20,7 +20,11 @@ const productSchema = new Schema(
             type: Number,
             required: true
         },
-        category: [Category]
+        category: {
+            type: Schema.Types.ObjectId,
+            ref: 'Category',
+            required: true
+        }
     },
     {
         toJSON: {
