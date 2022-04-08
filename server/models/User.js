@@ -19,13 +19,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minlength: 5
-    },
-    cart: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Product'
-      }
-    ]
+    }
+    // cart: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Product'
+    //   }
   },
   {
     toJSON: {
