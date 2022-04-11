@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Categories from '../components/Categories';
 import { useQuery } from '@apollo/client';
-import { QUERY_PRODUCTS } from '../utils/queries';
+import { QUERY_PRODUCTS } from '../utils/queries.js';
+import productList from '../components/ProductsList.js';
 
 const Homepage = () => {
     const { loading, data } = useQuery(QUERY_PRODUCTS);
@@ -10,10 +11,19 @@ const Homepage = () => {
     console.log(products);
 
     return (
+        <main>
         <div>
             <Navbar/>
             <Categories/>
         </div>
+        <div className="col-12 mb-3">
+            {loading ? (
+              <div>Loading...</div>
+            ) : (
+              <productList products={products} title="hey here's some product placement" />
+            )}
+          </div>
+        </main>
     )
 }
 
