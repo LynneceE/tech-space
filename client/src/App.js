@@ -1,11 +1,12 @@
 //import './App.css';
 // import Cart from "./pages/Cart";
  import Homepage from './pages/Homepage';
-// import Login from "./pages/Login";
-// import Product from "./pages/Product";
-// import ProductList from "./pages/ProductList";
-// import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Product from "./pages/Product";
+import ProductList from "./components/ProductsList";
+import Register from "./pages/Register";
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -19,7 +20,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Homepage/>
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          {/* <Header /> */}
+          <div className="container">
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/" component={ProductList} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Register} />
+            <Route exact path="/product" component={Product} />
+          </div>
+          {/* <Footer /> */}
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
