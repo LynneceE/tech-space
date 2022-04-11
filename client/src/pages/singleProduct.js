@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import productList from '../components/ProductsList';
-import productForm from '../components/ProductForm';
+// import productList from '../components/ProductsList';
+import ProductForm from '../components/ProductForm';
 
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
@@ -34,7 +34,7 @@ const oneProduct = (props) => {
           </div>
         </div>
   
-        {Auth.loggedIn() && <productForm productId={product._id} />}
+        {Auth.loggedIn() && <ProductForm productId={product._id} />}
       </div>
     );
 };
