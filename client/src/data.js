@@ -1,4 +1,4 @@
-export const categories = [
+export const carouselItems = [
     {
         id: 1,
         title: "Desktop Computers",
