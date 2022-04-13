@@ -14,7 +14,7 @@ type Product {
     description: String
     price: String
     image: String
-    category: Category
+    category: [Category]
 }
 
 type User {

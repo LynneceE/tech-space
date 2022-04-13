@@ -1,6 +1,6 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
-const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core');
+// const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core');
 const path = require('path');
 const  {
   ApolloServerPluginLandingPageGraphQLPlayground
