@@ -15,6 +15,7 @@ const Left = styled.div`
 `
 const Center = styled.div`
     flex: 1
+    text-color: white
 `
 const Right = styled.div`
     flex: 1

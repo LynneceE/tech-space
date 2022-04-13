@@ -88,7 +88,7 @@ import {
     return (
       <Container>
         <Left>
-          <Logo>Tech Space.</Logo>
+          <Logo>Tech Space</Logo>
           <Desc>
             Our new online shop is here for all your computer hardware needs. Offering a variety of desktops, laptops, tablets, and other accessories, we'll keep you connected, at home or on-the-go. 
           </Desc>
