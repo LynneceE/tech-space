@@ -3,7 +3,7 @@ const Product = require('../models/Product');
 const Category = require('../models/Category');
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost:3001/',
+    process.env.MONGODB_URI || 'mongodb://localhost:27017/tech-space',
     {
       useNewUrlParser: true, 
       useUnifiedTopology: true,

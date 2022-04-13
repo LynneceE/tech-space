@@ -1,4 +1,6 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
+import React from 'react';
+
+// import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { useState } from "react";
 import styled from "styled-components";
 import { carouselItems } from "../data";
@@ -97,7 +99,7 @@ const Carousel = () => {
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
+        {/* <ArrowLeftOutlined /> */}
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {carouselItems.map((item) => (
@@ -114,7 +116,7 @@ const Carousel = () => {
         ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlined />
+        {/* <ArrowRightOutlined /> */}
       </Arrow>
     </Container>
   );
