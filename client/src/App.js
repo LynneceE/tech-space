@@ -1,6 +1,6 @@
-//import './App.css';
+// import './App.css';
 // import Cart from "./pages/Cart";
- import Homepage from './pages/Homepage';
+import Homepage from './pages/Homepage';
 // import Login from "./pages/Login";
 // import Product from "./pages/Product";
 // import ProductList from "./pages/ProductList";
