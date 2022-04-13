@@ -2,7 +2,7 @@
 // import Cart from "./pages/Cart";
  import Homepage from './pages/Homepage';
 import Login from "./pages/Login";
-import oneProduct from "./pages/singleProduct";
+import OneProduct from "./pages/singleProduct";
 import ProductList from "./components/ProductsList";
 import Register from "./pages/Register";
 import None from './pages/None';
@@ -30,7 +30,7 @@ function App() {
             <Route exact path="/" component={ProductList} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Register} />
-            <Route exact path="/product/:id" component={oneProduct} />
+            <Route exact path="/product/:id" component={OneProduct} />
 
             <Route component={None} />
           </div>
