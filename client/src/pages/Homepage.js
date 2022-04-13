@@ -1,6 +1,9 @@
 import React from 'react';
+import Header from '../components/Header';
 import Navbar from '../components/Navbar';
-import Categories from '../components/Categories';
+// import Categories from '../components/Categories';
+import Carousel from '../components/Carousel';
+import Footer from '../components/Footer';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../utils/queries.js';
 import ProductsList from '../components/ProductsList.js';
@@ -13,8 +16,11 @@ const Homepage = () => {
     return (
         <main>
         <div>
+            <Header />
             <Navbar/>
-            <Categories/>
+            <Carousel />
+            {/* <Categories/> */}
+            <Footer />
         </div>
         <div className="col-12 mb-3">
             {loading ? (

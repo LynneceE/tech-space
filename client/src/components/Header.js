@@ -15,13 +15,12 @@ const Left = styled.div`
 `
 const Center = styled.div`
     flex: 1
-    text-color: white
 `
 const Right = styled.div`
     flex: 1
 `
 
-const Navbar = () => {
+const Header = () => {
     return (
         <Container>
             <Wrapper>
@@ -35,4 +34,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default Header;
