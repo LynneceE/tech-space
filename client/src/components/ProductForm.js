@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/client';
 import { ADD_PRODUCT } from '../../utils/mutations.js';
-import { Product } from '../../../server/models/Product.js';
+// import { Product } from '../../../server/models/Product.js';
 import { QUERY_PRODUCTS, QUERY_ME } from '../../utils/queries.js';
 
 const ProductForm = ({ product_id }) => {
