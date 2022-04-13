@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const productList = ({ products, title }) => {
-  if (!products.length) {
-    return <h3>no products available... yet</h3>;
-  }
+const productList = ( props ) => {
+  console.log(props);
+  const {title, products} = props;
+  // if (!products.length) {
+  //   return <h3>no products available... yet</h3>;
+  // }
 
   return (
     <div>

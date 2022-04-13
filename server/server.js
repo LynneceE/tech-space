@@ -2,15 +2,12 @@ const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
 const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core');
 const path = require('path');
-const  {
-  ApolloServerPluginLandingPageGraphQLPlayground
-} = require('apollo-server-core');
 
 const {typeDefs, resolvers} = require('./schemas');
 const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 const startServer = async () => {

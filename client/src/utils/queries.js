@@ -4,10 +4,10 @@ export const QUERY_PRODUCTS = gql`
     query products($name: String) {    
         products(name: $name) {
         _id
+        name
         image
         description
         price
-        category
         category {
           _id
           name
@@ -17,13 +17,33 @@ export const QUERY_PRODUCTS = gql`
     }
 `;
 
+export const QUERY_PRODUCT = gql`
+  query product($id: ID!) {
+    product(_id: $id) {
+      _id
+      name
+      image
+      description
+      price 
+      category {
+        _id
+        name
+        description
+      }
+    }
+  }
+`;
+
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
       _id
       username
       email
+      password
+      cart
   }
+}
 `;
 
 export const QUERY_ME = gql`
@@ -32,6 +52,8 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      password
+      cart
   }
 }
 `;
