@@ -8,7 +8,7 @@ import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCT } from '../utils/queries';
 
-const oneProduct = (props) => {
+const OneProduct = (props) => {
     const { id: productId } = useParams();
   
     const { loading, data } = useQuery(QUERY_PRODUCT, {
@@ -39,5 +39,5 @@ const oneProduct = (props) => {
     );
 };
   
-export default oneProduct;
+export default OneProduct;
   

@@ -23,3 +23,13 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_PRODUCT = gql`
+  mutation addProduct($description: String!) {
+    addProduct(description: $description) {
+      _id
+      description
+      username
+    }
+  }
+`;

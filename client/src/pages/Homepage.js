@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Categories from '../components/Categories';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../utils/queries.js';
-import productList from '../components/ProductsList.js';
+import ProductsList from '../components/ProductsList.js';
 
 const Homepage = () => {
     const { loading, data } = useQuery(QUERY_PRODUCTS);
@@ -20,7 +20,7 @@ const Homepage = () => {
             {loading ? (
               <div>Loading...</div>
             ) : (
-              <productList products={products} title="hey here's some product placement" />
+              <ProductsList products={products} title="hey here's some product placement" />
             )}
           </div>
         </main>
