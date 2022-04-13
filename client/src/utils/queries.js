@@ -1,25 +1,20 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_PRODUCTS = gql`
-    query products($name: String) {    
-        products(name: $name) {
+    query getProducts {    
+        products {
         _id
         name
         image
         description
         price
-        category {
-          _id
-          name
-          description
-        }
       }
     }
 `;
 
 export const QUERY_PRODUCT = gql`
-  query product($id: ID!) {
-    product(_id: $id) {
+  query getOneProduct($productId: ID!) {
+    product (productId: $productId) {
       _id
       name
       image
@@ -41,7 +36,6 @@ export const QUERY_USER = gql`
       username
       email
       password
-      cart
   }
 }
 `;
@@ -53,7 +47,6 @@ export const QUERY_ME = gql`
       username
       email
       password
-      cart
   }
 }
 `;
