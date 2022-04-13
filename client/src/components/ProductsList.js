@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-const productList = ( props ) => {
-  console.log(props);
+const productList = (props) => {
   const {title, products} = props;
   // if (!products.length) {
   //   return <h3>no products available... yet</h3>;

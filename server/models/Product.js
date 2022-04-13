@@ -19,11 +19,11 @@ const productSchema = new Schema(
             type: Number,
             required: true
         },
-
         category: {
             type: String,
             ref: 'Category',
-            required: true
+            required: true,
+            trim: true
         },
 
     },

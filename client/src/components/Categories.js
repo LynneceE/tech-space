@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoryItem from './CategoryItem';
-import { categories } from "../data";
+// import { categories } from "../data";
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -11,10 +11,11 @@ const Container = styled.div`
 const Categories = () => {
     return (
         <Container>
-            {categories.map(item => (
+            {/* {categories.map(item => (
                 <CategoryItem item={item}/>
-            ))}
-            Categories
+            ))} */}
+            <CategoryItem />
+            {/* Categories */}
         </Container>
     )
 }

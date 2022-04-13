@@ -5,7 +5,7 @@ import { ADD_PRODUCT } from '../utils/mutations.js';
 // import { Product } from '../../../server/models/Product.js';
 import { QUERY_PRODUCTS, QUERY_ME } from '../utils/queries.js';
 
-const ProductForm = ({ product_id }) => {
+
     const ProductForm = () => {
         const [description, setText] = useState('');
         const [characterCount, setCharacterCount] = useState(0);
@@ -82,7 +82,6 @@ const ProductForm = ({ product_id }) => {
             </form>
           </div>
         );
-    }
-};
+    };
    
 export default ProductForm;
