@@ -1,6 +1,6 @@
 // import './App.css';
 // import Cart from "./pages/Cart";
- import Homepage from './pages/Homepage';
+import Homepage from './pages/Homepage';
 import Login from "./pages/Login";
 import OneProduct from "./pages/singleProduct";
 import ProductList from "./components/ProductsList";
