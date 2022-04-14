@@ -2,34 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    width: 100%;
     height: 60px;
     background-color: black;
 `
-const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
 
-const Left = styled.div`
-    flex: 1
-`
-const Center = styled.div`
-    flex: 1
-`
-const Right = styled.div`
-    flex: 1
-`
+const Title = styled.h1`
+font-family: Helvetica, sans-serif`
 
 const Header = () => {
     return (
         <Container>
-            <Wrapper>
-                <Left>
-                    left
-                </Left>
-                <Center>center</Center>
-                <Right>right</Right>
-            </Wrapper>
+            <Title>Tech Space</Title>
         </Container>
     )
 }

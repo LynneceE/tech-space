@@ -1,36 +1,33 @@
 const { Schema, model } = require('mongoose');
-const { Category } = require('./Category');
 
 const productSchema = new Schema(
     {
         name: {
             type: String,
-            required: true
+            required: true,
+            trim: true
         },
         image: {
             type: String,
             required: true,
         },
         description: {
-            type: String,
-            required: true
+            type: String
         },
         price: {
-            type: Number,
-            required: true
+            type: Number
         },
+        quantity: {
+            type: Number,
+            min: 0,
+            default: 0
+          },
         category: {
             type: String,
             ref: 'Category',
-            required: true,
-            trim: true
+            required: true
         },
 
-    },
-    {
-        toJSON: {
-            getters: true
-        }
     }
 );
 

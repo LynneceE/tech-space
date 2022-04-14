@@ -1,4 +1,7 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
+
 
 const categorySchema = new Schema(
     {
@@ -12,14 +15,9 @@ const categorySchema = new Schema(
             required: true,
             trim: true
         }
-    },
-    {
-        toJSON: {
-            getters: true
-        }
     }
 );
 
-const Category = model('Category', categorySchema);
+const Category = mongoose.model('Category', categorySchema);
 
 module.exports = Category;

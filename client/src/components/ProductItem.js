@@ -5,7 +5,7 @@ import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
 
-function CategoryItem(item) {
+function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
   const {
@@ -57,4 +57,4 @@ function CategoryItem(item) {
   );
 }
 
-export default CategoryItem;
+export default ProductItem;

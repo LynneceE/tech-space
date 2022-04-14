@@ -34,6 +34,7 @@ const seedCategories = [
         description: 'Gear and parts to enhance your experience.'
     }
 ]
+console.log('categories seeded...');
 
 const seedProducts = [
     {
@@ -66,6 +67,8 @@ const seedProducts = [
         category: 'Accessories'
     }
 ];
+
+console.log('products seeded...');
 
 const seedDB = async () => {
     await Category.deleteMany({});

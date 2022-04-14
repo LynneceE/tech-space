@@ -19,16 +19,9 @@ const Homepage = () => {
             <Header />
             <Navbar/>
             <Carousel />
-            {/* <Categories/> */}
+            <ProductsList/>
             <Footer />
         </div>
-        <div className="col-12 mb-3">
-            {loading ? (
-              <div>Loading...</div>
-            ) : (
-              <ProductsList products={products} title="hey here's some product placement" />
-            )}
-          </div>
         </main>
     )
 }
