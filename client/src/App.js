@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import OneProduct from "./pages/singleProduct";
 import ProductList from "./components/ProductsList";
 import Register from "./pages/Register";
-import None from './pages/None';
+// import None from './pages/None';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ function App() {
             <Route exact path="/signup" component={Register} />
             <Route exact path="/product/:id" component={OneProduct} />
 
-            <Route component={None} />
+            {/* <Route component={None} /> */}
           </div>
           </Switch>
           {/* <Footer /> */}

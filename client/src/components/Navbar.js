@@ -1,38 +1,66 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import Auth from '../utils/auth';
 
-const Container = styled.div`
-    height: 60px;
-    background-color: black;
-`
-const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
 
-const Left = styled.div`
-    flex: 1
-`
-const Center = styled.div`
-    flex: 1
-    text-color: white
-`
-const Right = styled.div`
-    flex: 1
-`
 
-const Navbar = () => {
+function NavBar () {
+
+    function showNavigation() {
+        if (Auth.loggedIn()) {
+          return (
+            <ul className="flex-row">
+              <li className="mx-1">
+                <Link to="/orderHistory">
+                  Order History
+                </Link>
+              </li>
+              <li className="mx-1">
+                {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+                <a href="/" onClick={() => Auth.logout()}>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          );
+        } else {
+          return (
+            <ul className="flex-row">
+              <li className="mx-1">
+                <Link to="/signup">
+                  Signup
+                </Link>
+              </li>
+              <li className="mx-1">
+                <Link to="/login">
+                  Login
+                </Link>
+              </li>
+            </ul>
+          );
+        }
+      }
+
     return (
-        <Container>
-            <Wrapper>
-                <Left>
-                    left
-                </Left>
-                <Center>center</Center>
-                <Right>right</Right>
-            </Wrapper>
-        </Container>
-    )
-}
+        <header className="flex-row px-1">
+      <h1>
+        <Link to="/">
+          Tech Space
+        </Link>
+      </h1>
 
-export default Navbar;
+      <ul>
+          <li>
+          <Link to="/CategoryPage">
+          Categories
+        </Link>
+        
+          </li>
+          {showNavigation()}
+      </ul>
+    </header>
+    )
+
+}
+export default NavBar;

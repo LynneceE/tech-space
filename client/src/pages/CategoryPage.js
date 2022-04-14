@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/NavBar';
 import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 
@@ -8,7 +8,7 @@ export const CategoryPage = () => {
     return (
         <div>
             <Header />
-            <Navbar/>
+            {/* <Navbar/> */}
             <Categories />
             <Footer />
         </div>

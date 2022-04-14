@@ -38,7 +38,7 @@ const Register = () => {
 };
 
 return (
-    <main className="flex-row justify-center mb-4">
+    <main className="container-2 my-1">
       <div className="col-12 col-md-6">
         <div className="card">
           <h4 className="card-header">Register</h4>
