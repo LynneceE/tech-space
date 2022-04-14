@@ -5,7 +5,7 @@ import Auth from '../utils/auth';
 
 
 
-function NavBar () {
+function Navbar () {
 
     function showNavigation() {
         if (Auth.loggedIn()) {
@@ -63,4 +63,4 @@ function NavBar () {
     )
 
 }
-export default NavBar;
+export default Navbar;

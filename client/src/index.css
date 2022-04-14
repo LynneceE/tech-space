@@ -4,7 +4,6 @@
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -31,7 +30,7 @@ header a {
 
 }
 
-button {
+/* button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
@@ -42,7 +41,7 @@ button {
   margin: 0 1px;
   background-color: #000;
   color: #fff;
-}
+} */
 
 button:hover {
   opacity: .8;
@@ -53,9 +52,9 @@ button[disabled] {
   opacity: .8;
 }
 
-img {
+/* img {
   max-width: 100%;
-}
+} */
 
 span[role="img"] {
   cursor: default;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavBar from '../components/Navbar';
+import Navbar from '../components/Navbar';
 // import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
@@ -16,7 +16,7 @@ const Homepage = () => {
     return (
         <main>
         <div>
-            <NavBar/>
+            <Navbar/>
             <Carousel />
             {/* <Categories/> */}
             <Footer />
