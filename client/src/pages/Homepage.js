@@ -16,11 +16,11 @@ const Homepage = () => {
     return (
         <main>
         <div>
-            <Header />
-            <Navbar/>
-            <Carousel />
-            <ProductsList/>
-            <Footer />
+            <Header></Header>
+            <Navbar></Navbar>
+            <Carousel></Carousel>
+            <ProductsList></ProductsList>
+            <Footer></Footer>
         </div>
         </main>
     )
