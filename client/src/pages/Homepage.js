@@ -6,10 +6,10 @@ import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../utils/queries.js';
-import ProductsList from '../components/ProductsList.js';
+import ProductList from '../components/ProductList.js';
 
 const Homepage = () => {
-    const { loading, data } = useQuery(QUERY_PRODUCTS);
+    const { data } = useQuery(QUERY_PRODUCTS);
     const products = data?.products || [];
     console.log(products);
 
@@ -19,7 +19,7 @@ const Homepage = () => {
             <Header />
             <Navbar/>
             <Carousel />
-            <ProductsList/>
+            <ProductList/>
             <Footer />
         </div>
         </main>

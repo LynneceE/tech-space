@@ -3,8 +3,9 @@
 import  React from 'react';
 import Homepage from './pages/Homepage';
 import Login from "./pages/Login";
-import OneProduct from "./pages/singleProduct";
-import ProductList from "./components/ProductsList";
+// import OneProduct from "./pages/singleProduct";
+import Detail from './pages/Detail';
+// import ProductList from "./components/ProductList";
 import Register from "./pages/Register";
 import None from './pages/None';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
@@ -28,10 +29,10 @@ function App() {
           {/* <Header /> */}
           <div className="container">
             <Route exact path="/" component={Homepage} />
-            <Route exact path="/" component={ProductList} />
+            {/* <Route exact path="/product" component={ProductList} /> */}
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Register} />
-            <Route exact path="/product/:id" component={OneProduct} />
+            <Route exact path="/product/:id" component={Detail} />
 
             <Route component={None} />
           </div>

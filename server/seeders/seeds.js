@@ -1,22 +1,24 @@
-const mongoose = require('mongoose');
-const Product = require('../models/Product');
-const Category = require('../models/Category');
+const db = require('../config/connection');
+const { User, Product, Category } = require('../models');
 
-mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost:27017/tech-space',
-    {
-      useNewUrlParser: true, 
-      useUnifiedTopology: true,
-    }
-  )
-  .then(() => {
-      console.log('Connected to MongoDB...');
-  })
-  .catch((err) => {
-      console.log(err);
-  });
+db.once('open', async () => {
+  await Category.deleteMany();
 
-const seedCategories = [
+// mongoose.connect(
+//     process.env.MONGODB_URI || 'mongodb://localhost:27017/tech-space',
+//     {
+//       useNewUrlParser: true, 
+//       useUnifiedTopology: true,
+//     }
+//   )
+//   .then(() => {
+//       console.log('Connected to MongoDB...');
+//   })
+//   .catch((err) => {
+//       console.log(err);
+//   });
+
+const seedCategories = await Category.insertMany ([
     {
         name: 'Desktop Computers',
         description: 'All-in-one desktop computers. Includes monitor, keyboard, mouse and speakers.'
@@ -33,10 +35,12 @@ const seedCategories = [
         name: 'Accessories',
         description: 'Gear and parts to enhance your experience.'
     }
-]
+])
 console.log('categories seeded...');
 
-const seedProducts = [
+await Product.deleteMany();
+
+const seedProducts = await Product.insertMany ([
     {
         name: 'Acer Aspire C24-1651-UR15 AIO Desktop',
         image: 'https://m.media-amazon.com/images/I/71QfqMtNISL._AC_SL1500_.jpg',
@@ -66,17 +70,9 @@ const seedProducts = [
         price: 39.99,
         category: 'Accessories'
     }
-];
+]);
 
 console.log('products seeded...');
 
-const seedDB = async () => {
-    await Category.deleteMany({});
-    await Category.insertMany(seedCategories);
-    await Product.deleteMany({});
-    await Product.insertMany(seedProducts);
-};
-
-seedDB().then(() => {
-    mongoose.connection.close();
+process.exit();
 });
