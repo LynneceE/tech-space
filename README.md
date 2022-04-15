@@ -9,6 +9,7 @@ Our website features include various categories to choose from, an ability to ad
 * `mongoose` is included.
 * Express.js plays a role as well as Apollo Server.
 * Node.js is required to run the server to localhost.
+* Using Stripe as our checkout tool.
 
 
 NPM Packages included in our build: 
