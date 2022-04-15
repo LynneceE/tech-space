@@ -1,14 +1,16 @@
 # Welcome to Tech Space!
 ## Your #1 place for all things electronics!
 
-### description
+### Description
 Our website features include various categories to choose from, an ability to add products to your cart and purchasing them using our helpful tool Stripe, and a contact form for any questions our consumers have about our site!
 
-## installation & usage
+## Installation & Usage
 * MongoDB is the primary database for this project.
 * `mongoose` is included.
 * Express.js plays a role as well as Apollo Server.
 * Node.js is required to run the server to localhost.
+
+
 NPM Packages included in our build: 
 * @apollo/client,
 * graphql,
@@ -23,13 +25,13 @@ NPM Packages included in our build:
 * styled-components
 
 
-## collaborators
+## Collaborators
 Lynnece Eutsey, Brenham Pozzi and Margaret Barrera
 
-## tests
+## Any Tests?
 we have jest installed, but mostly test in console.log
 
-## repo & deployment
+## Repo & Deployment
 * ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ ) ~ enjoy our final project!
 * [repository](https://github.com/LynneceE/tech-space)
 * [heroku deploy](https://young-hollows-22377.herokuapp.com/)
